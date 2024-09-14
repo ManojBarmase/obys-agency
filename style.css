@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -9,6 +10,21 @@
 html,body{
     height: 100%;
     width: 100%;
+}
+
+/* round curser ke liye */
+#crsr{
+  height:1.8vw ;
+  width: 1.8vw;
+  border-radius: 50%;
+  /* background-color: white; */
+  border:1px solid #ffffffbe;
+  position: fixed;
+  z-index: 9999;
+  /* round curser khaa bhi jaye pura appear hoga means self ka color change karega */
+  mix-blend-mode: difference;
+  /* arrow curser round curser ke center ko follow karega */
+  transform: translate(-50%, -50%);
 }
 
 #loader{
@@ -108,3 +124,61 @@ html,body{
     width: 100%;
     background-color: #151515;
 }
+
+#page1 #nav{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 1.3vw 4.5vw;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#nav-part2 h4{
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.hero{
+    /* background-color: red; */
+    width: 72%;
+    margin-left: 27%;
+    height: fit-content;
+    /* background-color: red; */
+    overflow: hidden;display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+
+/* jab isko 2 ke place pr 1 dete hai to ye work nhi karta hai because ye nav ko nth-child(1) samj leta hai */
+.hero:nth-child(2){
+    margin-top: 15vh;
+} 
+
+.hero h1{
+    font-size: 4.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 5.2vw;
+}
+
+
+.hero h2, .hero h3{
+    font-size: 4.2vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 5.2vw;
+}
+
+.hero h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 400;
+}
+
